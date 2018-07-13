@@ -21,20 +21,20 @@ def webhook():
             msg = 'Shut up Colin'
             send_message(msg)
 
-    if "Hi Easton" in data['text']
-        if data['name'] == "Christian Walton" or data['name'] == "Colin Walton" or data['name'] == 'Dane'
+    if "Hi Easton" in data['text']:
+        if data['name'] == "Christian Walton" or data['name'] == "Colin Walton" or data['name'] == 'Dane':
             msg = "Wadddup uncle"
             send_message(msg)
-        elif data['name'] == "Jennifer Webb Walton"
+        elif data['name'] == "Jennifer Webb Walton":
             msg = "Hi Grandmaaaa!!"
             send_message(msg)
-        elif data['name'] == "Steven Walton"
+        elif data['name'] == "Steven Walton":
             msg = "Hey Gramps!"
             send_message(msg)
-        elif data['name'] == "Devin Walton"
+        elif data['name'] == "Devin Walton":
             msg = "Hi Mom :)"
             send_message(msg)
-        elif data['name'] == "Itz Ya Boi T Chainz"
+        elif data['name'] == "Itz Ya Boi T Chainz":
              msg = "Sup Papa Post".format(data['name'])
             send_message(msg)
     return "ok", 200
