@@ -21,7 +21,9 @@ def webhook():
             msg = 'Shut up Colin'
             send_message(msg)
 
-
+    if "Hi Easton" in data['text']
+         msg = "Wadddup {}".format(data['name'])
+         send_message(msg)
     return "ok", 200
 
 
