@@ -17,35 +17,37 @@ Things to add
 def webhook():
     data = request.get_json()
 
-    if data['name'] == 'Colin Walton':
-        if "left nut" in data['text']:
-            msg = "Suck my right nut"
-            send_message(msg)
-        elif data['created_at']%4 == 0:
-            msg = 'Shut up Colin'
+    if data['name'] != "Easton":
+        if data['name'] == 'Colin Walton':
+            if "left nut" in data['text']:
+                msg = "Suck my right nut"
+                send_message(msg)
+            elif data['created_at']%4 == 0:
+                msg = 'Shut up Colin'
+                send_message(msg)
+
+        if "Hi Easton" in data['text']:
+            if data['name'] == "Christian Walton" or data['name'] == "Colin Walton" or data['name'] == 'Dane':
+                msg = "Wadddup uncle"
+                send_message(msg)
+            elif data['name'] == "Jennifer Webb Walton":
+                msg = "Hi Grandmaaaa!!"
+                send_message(msg)
+            elif data['name'] == "Steven Walton":
+                msg = "Hey Gramps!"
+                send_message(msg)
+            elif data['name'] == "Devin Walton":
+                msg = "Hi Mom :)"
+                send_message(msg)
+            elif data['name'] == "Itz Ya Boi T Chainz":
+                msg = "Sup Papa Post"
+                send_message(msg)
+
+
+        if "droppin" in data['text'] or "dropping" in data['text']:
+            msg = "I only drop Tilted Titties because Papa Post and Mum didn't raise no bitch"
             send_message(msg)
 
-    if "Hi Easton" in data['text']:
-        if data['name'] == "Christian Walton" or data['name'] == "Colin Walton" or data['name'] == 'Dane':
-            msg = "Wadddup uncle"
-            send_message(msg)
-        elif data['name'] == "Jennifer Webb Walton":
-            msg = "Hi Grandmaaaa!!"
-            send_message(msg)
-        elif data['name'] == "Steven Walton":
-            msg = "Hey Gramps!"
-            send_message(msg)
-        elif data['name'] == "Devin Walton":
-            msg = "Hi Mom :)"
-            send_message(msg)
-        elif data['name'] == "Itz Ya Boi T Chainz":
-            msg = "Sup Papa Post"
-            send_message(msg)
-
-
-    if "droppin" or "dropping" in data['text']:
-        msg = "I only drop Tilted Titties because Papa Post and Mum didn't raise no bitch"
-        send_message(msg)
     return "ok", 200
 
 
