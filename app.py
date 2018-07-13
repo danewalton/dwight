@@ -14,8 +14,13 @@ def webhook():
     data = request.get_json()
 
     if data['name'] == 'Colin Walton':
-        msg = 'Shut up Colin'
-        send_message(msg)
+        if "left nut" in data['text']:
+            msg = "Suck my right nut"
+            send_message(msg)
+        elif data['created_at']%4 == 0:
+            msg = 'Shut up Colin'
+            send_message(msg)
+
 
     return "ok", 200
 
