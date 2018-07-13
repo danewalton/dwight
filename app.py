@@ -8,6 +8,10 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+"""
+Things to add
+ - Something 
+"""
 
 @app.route('/', methods=['POST'])
 def webhook():
@@ -37,6 +41,11 @@ def webhook():
         elif data['name'] == "Itz Ya Boi T Chainz":
             msg = "Sup Papa Post"
             send_message(msg)
+
+
+    if "droppin" or "dropping" in data['text']:
+        msg = "I only drop Tilted Titties because Papa Post and Mum didn't raise no bitch"
+        send_message(msg)
     return "ok", 200
 
 
