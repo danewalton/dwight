@@ -51,7 +51,7 @@ def webhook():
             msg = "I only drop Tilted Titties because Papa Post and Mum didn't raise no bitch"
             send_message(msg)
 
-        if "surf" in data['text']
+        if "surf" in data['text']:
             url = 'http://magicseaweed.com/api/2d93b2d0c882f2ff100591c9812ab5/forecast/?spot_id=2643'
 
             json = urlopen(url).read().decode()
