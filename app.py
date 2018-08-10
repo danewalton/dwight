@@ -52,11 +52,11 @@ def webhook():
             send_message(msg)
 
         if "surf" in data['text']:
-            url = 'http://magicseaweed.com/api/2d93b2d0c882f2ff100591c9812ab553/forecast/?spot_id=2643'
+            url = 'http://magicseaweed.com/api/2d93b2d0c882f2ff100591c9812ab553/forecast/?spot_id=2643&fields=swell.maxBreakingHeight,solidRating,wind.speed'
 
             res = urlopen(url).read()
             msgJson = json.loads(res)
-            msg = msgJson['swell']['maxBreakingHeight']
+            msg = msgJson[0]['maxBreakingHeight']
             send_message(msg)
 
     return "ok", 200
