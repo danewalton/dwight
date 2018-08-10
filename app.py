@@ -55,7 +55,7 @@ def webhook():
             url = 'http://magicseaweed.com/api/2d93b2d0c882f2ff100591c9812ab5/forecast/?spot_id=2643'
 
             json = urlopen(url).read().decode()
-            msg = data['swell'].get('maxBreakingHeight')
+            msg = data['swell']['maxBreakingHeight']
             send_message(msg)
 
     return "ok", 200
