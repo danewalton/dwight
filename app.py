@@ -22,7 +22,7 @@ def webhook():
             if "left nut" in data['text']:
                 msg = "Suck my right nut"
                 send_message(msg)
-            elif data['created_at']%8 == 0:
+            elif data['created_at']%14 == 0:
                 msg = 'Shut up Colin'
                 send_message(msg)
 
@@ -42,21 +42,14 @@ def webhook():
             elif data['name'] == "Itz Ya Boi T Chainz":
                 msg = "Sup Papa Post"
                 send_message(msg)
-        elif "Easton" in data['text']:
-            if data['created at']%4 == 0:
-                msg = "Yea but can we just take a second to appreciate I'm cute as shit"
+
+        if "Easton" in data['text']:
+            if data['created at']%2 == 0:
+                msg = "Hey hi thats me I'm cute as shit"
                 send_message(msg)
 
         if "droppin" in data['text'] or "dropping" in data['text']:
             msg = "I only drop Tilted Titties because Papa Post and Mum didn't raise no bitch"
-            send_message(msg)
-
-        if "surf" in data['text']:
-            url = 'http://magicseaweed.com/api/2d93b2d0c882f2ff100591c9812ab553/forecast/?spot_id=2643&fields=swell.maxBreakingHeight,solidRating,wind.speed'
-
-            res = urlopen(url).read()
-            msgJson = json.loads(res)
-            msg = msgJson[0]['maxBreakingHeight']
             send_message(msg)
 
     return "ok", 200
